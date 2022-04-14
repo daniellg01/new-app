@@ -1,0 +1,58 @@
+<ion-header mode="ios" color="dark">
+    <ion-toolbar color="dark">
+        <ion-title mode="md">Inventario App</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-card color="primary" mode="ios" (click)="servicio.ira('/clientes')">
+                    <ion-card-content>
+                        <ion-icon name="accessibility-outline"></ion-icon>
+                    </ion-card-content>
+                    <ion-card-header>
+                        <ion-card-title>Clientes</ion-card-title>
+                        <ion-card-subtitle>{{98}}</ion-card-subtitle>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card color="success" mode="ios" (click)="servicio.ira('/productos')">
+                    <ion-card-content>
+                        <ion-icon name="pizza-outline"></ion-icon>
+                    </ion-card-content>
+                    <ion-card-header>
+                        <ion-card-title>Productos</ion-card-title>
+                        <ion-card-subtitle>{{1898}}</ion-card-subtitle>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card color="warning" mode="ios" (click)="servicio.ira('/pedidos')">
+                    <ion-card-content>
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </ion-card-content>
+                    <ion-card-header>
+                        <ion-card-title>Pedidos</ion-card-title>
+                        <ion-card-subtitle>{{98}}</ion-card-subtitle>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card color="dark" mode="ios" (click)="servicio.ira('/usuarios')">
+                    <ion-card-content>
+                        <ion-icon name="man-outline"></ion-icon>
+                    </ion-card-content>
+                    <ion-card-header>
+                        <ion-card-title>Usuarios</ion-card-title>
+                        <ion-card-subtitle>{{1898}}</ion-card-subtitle>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
