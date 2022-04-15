@@ -1,40 +1,77 @@
-ion-card-content {
-    text-align: center;
-}
-
-ion-icon {
-    font-size: 60px;
-    animation: move 2s infinite;
-}
-
-ion-card {
-    border-radius: 10px 50px 10px 10px;
-    box-shadow: 4px 4px 10px #001833;
-}
-
-ion-toolbar {
-    border-radius: 0 0 20px 20px;
-}
-
-ion-header,
-ion-content {
-    background-color: white;
-}
-
-@keyframes move {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(20deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(-20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
+            ion-card-content {
+                text-align: center;
+            }
+            
+            ion-icon {
+                font-size: 60px;
+                animation: move 2s infinite;
+            }
+            
+            ion-card {
+                border-radius: 10px 50px 10px 10px;
+                box-shadow: 4px 4px 20px #001833;
+            }
+            
+            .primary {
+                background: rgba(56, 128, 255, 0.3);
+            }
+            
+            .warning {
+                background: rgba(255, 196, 9, 0.3);
+                color: white;
+            }
+            
+            .dark {
+                background: rgba(34, 36, 40, 0.3);
+            }
+            
+            .success {
+                background: rgba(45, 211, 111, 0.3);
+            }
+            
+            ion-header,
+            ion-content {
+                background: rgb(170, 69, 252);
+                --background: linear-gradient(180deg, rgba(170, 69, 252, 1) 0%, rgba(131, 58, 180, 1) 100%);
+            }
+            
+            ion-card-title {
+                text-align: center;
+            }
+            
+            ion-card-subtitle {
+                text-align: center;
+                font-size: 30px;
+            }
+            
+            ion-content {
+                background: rgb(131, 58, 180);
+                --background: linear-gradient(180deg, rgba(131, 58, 180, 1) 0%, rgba(252, 69, 220, 1) 100%);
+            }
+            
+            ion-title {
+                background: #833AB4;
+                background: -webkit-linear-gradient(to right, #833AB4 0%, #fb44db 100%);
+                background: -moz-linear-gradient(to right, #833AB4 0%, #fb44db 100%);
+                background: linear-gradient(to right, #833AB4 0%, #fb44db 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
+            @keyframes move {
+                0% {
+                    transform: rotate(0deg);
+                }
+                25% {
+                    transform: rotate(20deg);
+                }
+                50% {
+                    transform: rotate(0deg);
+                }
+                75% {
+                    transform: rotate(-20deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
+            }

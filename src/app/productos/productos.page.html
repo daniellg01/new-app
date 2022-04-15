@@ -4,26 +4,32 @@
             <ion-back-button mode="md" defaulthref="inicio"></ion-back-button>
         </ion-buttons>
         <ion-title mode="md">Productos</ion-title>
-        <ion-buttons slot="end" (click)="servicio.ira('producto/0')">
-            <ion-icon class="agregar" name="add-outline"></ion-icon>
+        <ion-buttons slot="end">
+            <ion-icon class="agregar" (click)="servicio.ira('producto/0')" name="add-outline"></ion-icon>
+            <ion-icon class="agregar" (click)="Cargar_Productos()" name="refresh"></ion-icon>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
-<ion-searchbar mode="md" color="dark" placeholder="Buscar" showCancelButton="focus"></ion-searchbar>
 
 <ion-content mode="md">
-    <ion-list mode="md">
-        <ion-item-sliding mode="md">
-
-
+    <ion-searchbar mode="md" [(ngModel)]="_texto" debounce="500" (ionChange)="Cargar_Productos()" color="success" placeholder="Buscar" showCancelButton="focus"></ion-searchbar>
+    <ion-list inset="true" lines="none" mode="md">
+        <ion-item-sliding *ngFor="let producto of productos" mode="md" #ionItemSliding>
             <ion-item>
-                <ion-label>Item Options</ion-label>
+                <ion-label text-wrap>
+                    <h2>
+                        {{producto.nombre}}
+                    </h2>
+                    <ion-badge color="primary">codigo:{{producto.codigo}}</ion-badge>
+                    <ion-badge color="success">${{producto.precio}}</ion-badge>
+                    <ion-badge color="danger">Stock:{{producto.stock}}</ion-badge>
+                </ion-label>
             </ion-item>
             <ion-item-options side="end">
-                <ion-item-option color="warning" (click)="Editar(item)">
+                <ion-item-option color="warning" (click)="Editar(producto,ionItemSliding)">
                     <ion-icon name="pencil-outline"></ion-icon>
                 </ion-item-option>
-                <ion-item-option color="danger" (click)="Borrar(item)">
+                <ion-item-option color="danger" (click)="Borrar(producto,ionItemSliding)">
                     <ion-icon name="close-circle-outline"></ion-icon>
                 </ion-item-option>
             </ion-item-options>
